@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightSmile Dental Clinic | Your Smile, Our Priority</title>
+
+<style>
+:root {
+    --primary: #6554a4;
+    --primary-dark: #49377f;
+    --light: #f0edfa;
+    --background: #faf9fe;
+    --dark: #28243b;
+    --text: #686477;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1150px, 92%);
+    margin: auto;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 42px;
+}
+
+.section-heading span {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--text);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 13px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* NAVBAR */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    box-shadow: 0 3px 15px #28243b12;
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--dark);
+}
+
+.nav-links {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HOME */
+
+.hero {
+    min-height: 620px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 65px 0;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: var(--primary);
+    background: var(--light);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    color: var(--text);
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-image {
+    height: 440px;
+    position: relative;
+}
+
+.hero-image img {
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 0 var(--light);
+}
+
+.hero-note {
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    background: white;
+    padding: 17px 22px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px #0002;
+}
+
+.hero-note strong {
+    color: var(--primary);
+    display: block;
+    font-size: 18px;
+}
+
+/* HIGHLIGHTS */
+
+.trust-bar {
+    background: var(--primary);
+    color: white;
+    padding: 25px 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.trust-grid h3 {
+    font-size: 18px;
+}
+
+.trust-grid p {
+    color: #eeeafd;
+    font-size: 13px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image {
+    height: 460px;
+}
+
+.about-image img {
+    height: 100%;
+    border-radius: 18px;
+}
+
+.about-content h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 13px 0 20px;
+}
+
+.about-content p {
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+.check-list {
+    list-style: none;
+    margin: 20px 0 25px;
+}
+
+.check-list li {
+    color: var(--text);
+    margin: 10px 0;
+}
+
+.check-list li::before {
+    content: "✓";
+    color: var(--primary);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* SERVICES */
+
+.services-section {
+    background: var(--light);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #28243b0c;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+}
+
+.service-card img {
+    height: 210px;
+}
+
+.service-content {
+    padding: 22px;
+}
+
+.service-icon {
+    font-size: 27px;
+}
+
+.service-content h3 {
+    margin: 8px 0;
+    font-size: 21px;
+}
+
+.service-content p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.service-content a {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+/* WHY CHOOSE US */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.why-card {
+    text-align: center;
+    padding: 28px 20px;
+    border: 1px solid #e5e0f2;
+    border-radius: 13px;
+    background: white;
+}
+
+.why-icon {
+    font-size: 38px;
+}
+
+.why-card h3 {
+    margin: 10px 0;
+}
+
+.why-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* DENTIST */
+
+.doctor-section {
+    background: var(--light);
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.doctor-image {
+    height: 420px;
+}
+
+.doctor-image img {
+    height: 100%;
+    border-radius: 18px;
+}
+
+.doctor-content h2 {
+    font-size: 37px;
+    margin: 12px 0;
+}
+
+.doctor-content p {
+    color: var(--text);
+    margin: 13px 0;
+}
+
+.doctor-content ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.doctor-content li {
+    color: var(--text);
+    margin: 10px 0;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 185px;
+    gap: 14px;
+}
+
+.gallery-grid img {
+    height: 100%;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+.gallery-grid img:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* APPOINTMENT BANNER */
+
+.appointment-banner {
+    background:
+    linear-gradient(90deg, #49377fee, #6554a4bb),
+    url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+    padding: 85px 20px;
+    text-align: center;
+    color: white;
+}
+
+.appointment-banner h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 15px;
+}
+
+.appointment-banner p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #f0edfa;
+}
+
+.btn-white {
+    background: white;
+    color: var(--primary);
+    border-color: white;
+}
+
+.btn-white:hover {
+    background: var(--light);
+    color: var(--primary-dark);
+    border-color: var(--light);
+}
+
+/* REVIEWS */
+
+.reviews-section {
+    background: var(--light);
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.review-card {
+    background: white;
+    padding: 25px;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px #28243b0b;
+    border: 1px solid #e9e4f4;
+}
+
+.stars {
+    color: #e3a42e;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.review-card p {
+    color: var(--text);
+    margin: 14px 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.review-card strong {
+    color: var(--primary-dark);
+    display: block;
+}
+
+.review-card small {
+    color: #898499;
+}
+
+/* FAQ */
+
+.faq-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.faq-list details {
+    background: white;
+    padding: 20px;
+    border: 1px solid #e5e0f2;
+    border-radius: 10px;
+    margin-bottom: 13px;
+}
+
+.faq-list summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-list details p {
+    color: var(--text);
+    padding-top: 12px;
+}
+
+/* CONTACT */
+
+.contact-section {
+    background: #f0edfa;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.contact-info h2 {
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.contact-info > p {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.contact-detail {
+    margin: 20px 0;
+}
+
+.contact-detail h3 {
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.contact-detail p {
+    color: var(--text);
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #28243b0c;
+}
+
+.contact-form h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ded9eb;
+    border-radius: 7px;
+    font: inherit;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    background: #29243d;
+    color: white;
+    padding: 55px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 35px;
+}
+
+.footer-logo {
+    color: #c8bdf1;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.footer-grid h3 {
+    margin-bottom: 15px;
+}
+
+.footer-grid p,
+.footer-grid a {
+    color: #ded9eb;
+    font-size: 14px;
+}
+
+.footer-grid a {
+    display: block;
+    margin: 8px 0;
+}
+
+.footer-grid a:hover {
+    color: #c8bdf1;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #ffffff25;
+    padding-top: 20px;
+    margin-top: 35px;
+    color: #c9c3d8;
+    font-size: 13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 50;
+    background: #20bd62;
+    color: white;
+    padding: 13px 19px;
+    border-radius: 35px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px #0003;
+}
+
+/* ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 22px;
+        flex-direction: column;
+        box-shadow: 0 8px 15px #0001;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar > .btn {
+        display: none;
+    }
+
+    .hero,
+    .about-grid,
+    .doctor-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        order: -1;
+        height: 360px;
+    }
+
+    .hero-note {
+        left: 12px;
+    }
+
+    .service-grid,
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 560px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-image {
+        height: 270px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .trust-grid,
+    .service-grid,
+    .why-grid,
+    .review-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image,
+    .doctor-image {
+        height: 290px;
+    }
+
+    .about-content h2,
+    .doctor-content h2,
+    .contact-info h2 {
+        font-size: 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 130px;
+    }
+
+    .gallery-grid img:first-child {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .whatsapp {
+        right: 12px;
+        bottom: 12px;
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#home" class="logo">🦷 BRIGHT<span>SMILE</span></a>
+
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" onclick="closeMenu()">HOME</a>
+            <a href="#about" onclick="closeMenu()">ABOUT</a>
+            <a href="#services" onclick="closeMenu()">SERVICES</a>
+            <a href="#doctor" onclick="closeMenu()">OUR DENTIST</a>
+            <a href="#gallery" onclick="closeMenu()">GALLERY</a>
+            <a href="#reviews" onclick="closeMenu()">REVIEWS</a>
+            <a href="#contact" onclick="closeMenu()">CONTACT</a>
+        </nav>
+
+        <a href="#contact" class="btn">BOOK APPOINTMENT</a>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+
+<section class="container hero" id="home">
+
+    <div class="hero-content reveal">
+
+        <span class="hero-tag">YOUR SMILE, OUR PRIORITY</span>
+
+        <h1>A Brighter Smile Begins With <span>Better Care.</span></h1>
+
+        <p>
+            Welcome to BrightSmile Dental Clinic. Discover a welcoming
+            dental care experience, learn about common treatments and
+            take the first step towards looking after your oral health.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#contact" class="btn">Book an Appointment</a>
+            <a href="#services" class="btn" style="background:white;color:#6554a4">
+                Explore Services
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-image reveal">
+
+        <img
+        src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1100&q=85"
+        alt="Dentist providing dental care to a patient">
+
+        <div class="hero-note">
+            <strong>Healthy Smiles Matter</strong>
+            <span>Care, comfort and confidence</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- HIGHLIGHTS -->
+
+<section class="trust-bar">
+
+    <div class="container trust-grid">
+
+        <div>
+            <h3>🦷 Dental Care</h3>
+            <p>Information about common dental treatments</p>
+        </div>
+
+        <div>
+            <h3>🤝 Patient First</h3>
+            <p>Clear communication and patient comfort</p>
+        </div>
+
+        <div>
+            <h3>✨ Healthy Smiles</h3>
+            <p>Encouraging everyday oral health habits</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section container" id="about">
+
+    <div class="about-grid">
+
+        <div class="about-image reveal">
+            <img
+            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern dental clinic interior">
+        </div>
+
+        <div class="about-content reveal">
+
+            <span style="color:#6554a4;font-weight:bold;letter-spacing:2px">
+                ABOUT OUR CLINIC
+            </span>
+
+            <h2>Helping You Smile With Confidence</h2>
+
+            <p>
+                BrightSmile Dental Clinic is designed around one simple idea:
+                everyone deserves to understand and care for their oral health.
+                We aim to make dental information easier to explore and
+                appointment enquiries simple.
+            </p>
+
+            <p>
+                A healthy smile is an important part of everyday wellbeing.
+                Regular dental check-ups, good brushing habits and timely
+                professional advice can help you look after your teeth and gums.
+            </p>
+
+            <p>
+                Whether you want to learn about routine check-ups, teeth
+                cleaning, dental fillings or braces, this website introduces
+                some common treatment options and helps you contact the clinic.
+            </p>
+
+            <p>
+                We believe that a positive dental experience begins with
+                listening, clear explanations and understanding each patient's
+                individual needs.
+            </p>
+
+            <ul class="check-list">
+                <li>Information about common dental services</li>
+                <li>Patient-friendly appointment enquiries</li>
+                <li>Focus on preventive oral health</li>
+                <li>Guidance for children and adults</li>
+                <li>A welcoming and comfortable experience</li>
+            </ul>
+
+            <a href="#contact" class="btn">Contact Our Clinic</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section services-section" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>OUR SERVICES</span>
+            <h2>Dental Care For Every Smile</h2>
+            <p>
+                Explore common dental services and learn how they may
+                help support your oral health.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card reveal">
+                <img
+                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=850&q=85"
+                alt="Dental examination">
+                <div class="service-content">
+                    <div class="service-icon">🦷</div>
+                    <h3>General Dentistry</h3>
+                    <p>
+                        Routine dental examinations help assess your oral
+                        health and identify concerns that may need attention.
+                    </p>
+                    <a href="#contact">Enquire Now →</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <img
+                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=850&q=85"
+                alt="Professional teeth cleaning">
+                <div class="service-content">
+                    <div class="service-icon">✨</div>
+                    <h3>Teeth Cleaning</h3>
+                    <p>
+                        Professional cleaning can help remove plaque and
+                        tartar buildup and support healthy gums.
+                    </p>
+                    <a href="#contact">Enquire Now →</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <img
+                src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=850&q=85"
+                alt="Dental braces">
+                <div class="service-content">
+                    <div class="service-icon">😁</div>
+                    <h3>Braces & Alignment</h3>
+                    <p>
+                        Orthodontic treatment may help address certain
+                        teeth alignment and bite concerns.
+                    </p>
+                    <a href="#contact">Enquire Now →</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <img
+                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=850&q=85"
+                alt="Dental equipment">
+                <div class="service-content">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Dental Fillings</h3>
+                    <p>
+                        Dental fillings are commonly used to restore teeth
+                        affected by cavities after professional assessment.
+                    </p>
+                    <a href="#contact">Enquire Now →</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <img
+                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=850&q=85"
+                alt="Dental treatment">
+                <div class="service-content">
+                    <div class="service-icon">🌟</div>
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>
+                        Explore cosmetic dental options that may improve
+                        the appearance of your smile.
+                    </p>
+                    <a href="#contact">Enquire Now →</a>
+                </div>
+            </div>
+
+            <div class="service-card reveal">
+                <img
+                src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=850&q=85"
+                alt="Child dental health">
+                <div class="service-content">
+                    <div class="service-icon">👶</div>
+                    <h3>Kids Dental Care</h3>
+                    <p>
+                        Early dental check-ups help children build good
+                        oral hygiene habits as they grow.
+                    </p>
+                    <a href="#contact">Enquire Now →</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="section container">
+
+    <div class="section-heading">
+        <span>WHY CHOOSE US</span>
+        <h2>A Better Dental Care Experience</h2>
+        <p>
+            Good dental care is about more than treatment.
+            It is also about comfort, understanding and trust.
+        </p>
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card reveal">
+            <div class="why-icon">👩‍⚕️</div>
+            <h3>Patient-Focused Care</h3>
+            <p>
+                Understanding individual concerns is an important
+                part of a positive dental experience.
+            </p>
+        </div>
+
+        <div class="why-card reveal">
+            <div class="why-icon">🏥</div>
+            <h3>Comfortable Environment</h3>
+            <p>
+                A welcoming environment can help make dental
+                visits feel more comfortable.
+            </p>
+        </div>
+
+        <div class="why-card reveal">
+            <div class="why-icon">📅</div>
+            <h3>Easy Enquiries</h3>
+            <p>
+                Contact the clinic through the appointment form
+                to ask about available consultation times.
+            </p>
+        </div>
+
+        <div class="why-card reveal">
+            <div class="why-icon">🪥</div>
+            <h3>Preventive Care</h3>
+            <p>
+                Regular check-ups and daily oral hygiene
+                support long-term dental health.
+            </p>
+        </div>
+
+        <div class="why-card reveal">
+            <div class="why-icon">💬</div>
+            <h3>Clear Communication</h3>
+            <p>
+                Understanding treatment options helps patients
+                make informed decisions about their care.
+            </p>
+        </div>
+
+        <div class="why-card reveal">
+            <div class="why-icon">👨‍👩‍👧</div>
+            <h3>Care For All Ages</h3>
+            <p>
+                Explore dental information for children,
+                adults and families.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DENTIST -->
+
+<section class="section doctor-section" id="doctor">
+
+    <div class="container doctor-grid">
+
+        <div class="doctor-image reveal">
+            <img
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1000&q=85"
+            alt="Dental professional">
+        </div>
+
+        <div class="doctor-content reveal">
+
+            <span style="color:#6554a4;font-weight:bold;letter-spacing:2px">
+                MEET OUR DENTAL TEAM
+            </span>
+
+            <h2>Care Begins With Understanding</h2>
+
+            <p>
+                A good dental experience starts with listening to the patient.
+                Dental professionals assess individual needs and explain
+                suitable treatment options based on clinical examination.
+            </p>
+
+            <p>
+                This section can introduce the real dentist, qualifications,
+                experience and professional approach once the clinic details
+                are confirmed.
+            </p>
+
+            <ul>
+                <li>✔ Friendly patient communication</li>
+                <li>✔ Clear explanations of dental procedures</li>
+                <li>✔ Attention to patient comfort</li>
+                <li>✔ Guidance on everyday oral hygiene</li>
+            </ul>
+
+            <a href="#contact" class="btn">Ask About an Appointment</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section container" id="gallery">
+
+    <div class="section-heading">
+        <span>OUR GALLERY</span>
+        <h2>A Look Inside BrightSmile</h2>
+        <p>
+            Explore dental care spaces, equipment and professional
+            environments.
+        </p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <img
+        src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85"
+        alt="Dental care session">
+
+        <img
+        src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=700&q=85"
+        alt="Dental clinic reception">
+
+        <img
+        src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=700&q=85"
+        alt="Dental examination">
+
+        <img
+        src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=700&q=85"
+        alt="Orthodontic treatment">
+
+        <img
+        src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=85"
+        alt="Dental equipment">
+
+    </div>
+
+</section>
+
+<!-- APPOINTMENT BANNER -->
+
+<section class="appointment-banner">
+
+    <h2>Give Your Smile the Care It Deserves</h2>
+
+    <p>
+        Have a dental concern or want to know more about our services?
+        Contact BrightSmile Dental Clinic to enquire about an appointment.
+    </p>
+
+    <a href="#contact" class="btn btn-white">Book Your Appointment</a>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="section reviews-section" id="reviews">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>PATIENT EXPERIENCES</span>
+            <h2>What Our Patients Say</h2>
+            <p>
+                A comfortable experience, clear communication and
+                confidence in dental care are important to every patient.
+                The following are sample testimonials for website layout;
+                replace them with genuine patient reviews before publishing.
+            </p>
+        </div>
+
+        <div class="review-grid">
+
+            <div class="review-card reveal">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "I really appreciate a clinic environment where patients
+                    can ask questions and understand their dental concerns.
+                    Clear communication makes a big difference when visiting
+                    a dentist. It is important to know what a treatment
+                    involves before making a decision."
+                </p>
+                <strong>Sample Patient 01</strong>
+                <small>Dental consultation experience</small>
+            </div>
+
+            <div class="review-card reveal">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "A welcoming atmosphere can make a dental visit feel
+                    much less stressful. I like the idea of having a place
+                    where the patient is listened to and receives clear
+                    explanations about available treatment options."
+                </p>
+                <strong>Sample Patient 02</strong>
+                <small>Clinic environment</small>
+            </div>
+
+            <div class="review-card reveal">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "Taking care of oral health is something we should
+                    remember in our everyday routine. Learning about
+                    brushing habits, regular check-ups and preventive
+                    care helps people understand why dental health matters."
+                </p>
+                <strong>Sample Patient 03</strong>
+                <small>Oral health guidance</small>
+            </div>
+
+            <div class="review-card reveal">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "I like that the website explains different dental
+                    services in a simple way. It is helpful to learn about
+                    general dentistry, cleaning and braces before contacting
+                    a clinic for more information."
+                </p>
+                <strong>Sample Patient 04</strong>
+                <small>Service information</small>
+            </div>
+
+            <div class="review-card reveal">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "Dental care for children is important because healthy
+                    habits can start at a young age. Parents should be able
+                    to ask questions and understand how to support their
+                    children's oral health as they grow."
+                </p>
+                <strong>Sample Patient 05</strong>
+                <small>Family dental care</small>
+            </div>
+
+            <div class="review-card reveal">
+                <div class="stars">★★★★★</div>
+                <p>
+                    "The appointment enquiry section makes it easy to
+                    send a message and ask about consultation availability.
+                    Having the important contact information in one place
+                    is useful for anyone planning a clinic visit."
+                </p>
+                <strong>Sample Patient 06</strong>
+                <small>Appointment enquiry</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="section container">
+
+    <div class="section-heading">
+        <span>HAVE QUESTIONS?</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Some helpful information before contacting the clinic.</p>
+    </div>
+
+    <div class="faq-list">
+
+        <details>
+            <summary>How can I book a dental appointment?</summary>
+            <p>
+                Fill in the appointment enquiry form on this page.
+                The clinic can contact you to confirm availability.
+            </p>
+        </details>
+
+        <details>
+            <summary>How often should I visit a dentist?</summary>
+            <p>
+                The recommended check-up frequency depends on your
+                oral health needs. Ask a qualified dentist for advice
+                based on your individual situation.
+            </p>
+        </details>
+
+        <details>
+            <summary>Do you provide dental care for children?</summary>
+            <p>
+                This website includes information about children's
+                dental care. Contact the clinic to confirm available services.
+            </p>
+        </details>
+
+        <details>
+            <summary>What should I do if I have a toothache?</summary>
+            <p>
+                Contact a qualified dental professional for an assessment.
+                Seek urgent dental care if you have severe pain, swelling
+                or other concerning symptoms.
+            </p>
+        </details>
+
+        <details>
+            <summary>Where can I find the clinic's address?</summary>
+            <p>
+                The clinic's verified address and contact details
+                should be added in the Contact section.
+            </p>
+        </details>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="container contact-grid">
+
+        <div class="contact-info">
+
+            <span style="color:#6554a4;font-weight:bold;letter-spacing:2px">
+                CONTACT US
+            </span>
+
+            <h2>Let's Take Care of Your Smile</h2>
+
+            <p>
+                Have a question about dental services or want to enquire
+                about a consultation? Send us a message.
+            </p>
+
+            <div class="contact-detail">
+                <h3>📍 Clinic Address</h3>
+                <p>Enter the actual clinic address here</p>
+            </div>
+
+            <div class="contact-detail">
+                <h3>📞 Phone Number</h3>
+                <p>+91 XXXXX XXXXX</p>
+            </div>
+
+            <div class="contact-detail">
+                <h3>✉ Email Address</h3>
+                <p>brightsmile@example.com</p>
+            </div>
+
+            <div class="contact-detail">
+                <h3>🕒 Working Hours</h3>
+                <p>Monday - Saturday: Enter actual clinic timings</p>
+                <p>Sunday: Enter actual availability</p>
+            </div>
+
+        </div>
+
+        <form class="contact-form" id="appointmentForm">
+
+            <h3>Appointment Enquiry</h3>
+
+            <input
+            type="text"
+            id="patientName"
+            placeholder="Your full name"
+            required>
+
+            <input
+            type="tel"
+            id="patientPhone"
+            placeholder="Your phone number"
+            pattern="[0-9+\-\s]{7,15}"
+            required>
+
+            <input
+            type="email"
+            id="patientEmail"
+            placeholder="Your email address"
+            required>
+
+            <select id="service" required>
+                <option value="">Select a service</option>
+                <option>General Dental Check-up</option>
+                <option>Teeth Cleaning</option>
+                <option>Dental Fillings</option>
+                <option>Braces and Alignment</option>
+                <option>Cosmetic Dentistry</option>
+                <option>Kids Dental Care</option>
+                <option>Other Enquiry</option>
+            </select>
+
+            <input type="date" id="appointmentDate" required>
+
+            <textarea
+            id="patientMessage"
+            placeholder="Write your message or enquiry..."
+            required></textarea>
+
+            <button type="submit" class="btn">
+                Send Appointment Enquiry
+            </button>
+
+            <p style="font-size:12px;color:#686477;margin-top:12px">
+                This demo form opens WhatsApp. It does not confirm
+                an appointment.
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <div class="footer-logo">🦷 BrightSmile</div>
+
+                <p style="margin-top:15px">
+                    Your smile deserves care and attention.
+                    Explore dental services, learn about oral health
+                    and contact our clinic for appointment enquiries.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Our Services</a>
+                <a href="#doctor">Our Dentist</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div>
+                <h3>Our Services</h3>
+                <a href="#services">General Dentistry</a>
+                <a href="#services">Teeth Cleaning</a>
+                <a href="#services">Dental Fillings</a>
+                <a href="#services">Braces & Alignment</a>
+                <a href="#services">Cosmetic Dentistry</a>
+                <a href="#services">Kids Dental Care</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 BrightSmile Dental Clinic. All Rights Reserved.
+            | Student Website Project
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+
+<a
+href="https://wa.me/91XXXXXXXXXX"
+class="whatsapp"
+target="_blank"
+rel="noopener">
+    ☎ WhatsApp
+</a>
+
+<script>
+
+// MOBILE NAVIGATION
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+function closeMenu() {
+    document.getElementById("navLinks").classList.remove("active");
+}
+
+// APPOINTMENT FORM
+
+document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    // Replace this with the real clinic WhatsApp number.
+    const clinicNumber = "91XXXXXXXXXX";
+
+    const name = document.getElementById("patientName").value.trim();
+    const phone = document.getElementById("patientPhone").value.trim();
+    const email = document.getElementById("patientEmail").value.trim();
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("appointmentDate").value;
+    const message = document.getElementById("patientMessage").value.trim();
+
+    const whatsappMessage =
+`Hello BrightSmile Dental Clinic,
+
+I would like to enquire about an appointment.
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Service: ${service}
+Preferred Date: ${date}
+Message: ${message}
+
+Please contact me about availability.`;
+
+    const whatsappURL =
+        "https://wa.me/" + clinicNumber +
+        "?text=" + encodeURIComponent(whatsappMessage);
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+// SMOOTH SCROLL REVEAL ANIMATION
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach((element) => {
+    observer.observe(element);
+});
+
+// PREVENT PAST APPOINTMENT DATES
+
+const dateInput = document.getElementById("appointmentDate");
+
+const today = new Date();
+
+const localDate = new Date(
+    today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().split("T")[0];
+
+dateInput.min = localDate;
+
+</script>
+
+</body>
+</html>
